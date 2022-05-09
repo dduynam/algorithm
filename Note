@@ -1,0 +1,4 @@
+In case we cannot compile at gcc, try using g++ instead.
+
+Int to String: std::to_string(10);
+String to Int: std::stoi("10");
