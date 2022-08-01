@@ -10,6 +10,16 @@ Specialization:
 	• Kruskal
 	• Prim-Jarnik
 Prim-Jarnik and Kruskal: find the globally optimal solution --> minimum spanning tree
+In contrast, for any greed algorithm to find Hamiltonian cycle might not find the shortest path, that is a solution to travelling salesman problem.
+
+**NOTE:
+	** Minimum spanning tree (MST, shortest spanning tree, SST): A minimum-weight tree in a weighted graph which contains all the graph's vertices. >>> Quickly find a near-optimal solution to the travelling salesman 
+	Similar problems: all pairs shortest path, travelling salesman.
+	** Hamiltonian cycle (tour): a path through a graph that starts and ends at the same vertex and includes every other vertex exactly once
+	** Euler cycle: includes each edge once.
 
 https://xlinux.nist.gov/dads/HTML/greedyalgo.html#:~:text=Definition%3A%20An%20algorithm%20that%20always,some%20instances%20of%20other%20problems.
 https://www.programiz.com/dsa/greedy-algorithm
+
+Reference:
+* Travelling salesman: https://xlinux.nist.gov/dads/HTML/travelingSalesman.html
