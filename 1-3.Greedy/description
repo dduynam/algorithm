@@ -1,4 +1,6 @@
 Greedy:
+	• Find a best option available at the moment without caring whether the current result is the optimal overall result. 
+	• Top-down approach (not cosidering the previous steps once chosen) and the overall corresponds to its subproblems.
 	• Build up a solution piece by piece, always choosing the next piece that offers the most obvious and immediate benefit >>> So the problems where choosing locally optimal also leads to global solution are the best fit for Greedy.
 Conclusion: For Knapsack problem, local optimal strategy is to choose the item that has maximum value vs weight ratio. This is also the globally optimal solution.
 
@@ -12,14 +14,23 @@ Specialization:
 Prim-Jarnik and Kruskal: find the globally optimal solution --> minimum spanning tree
 In contrast, for any greed algorithm to find Hamiltonian cycle might not find the shortest path, that is a solution to travelling salesman problem.
 
+Pros: Easy to deploy, performs better than others
+Cons: Not always produce the optimal solution. Appear in finding the longest way matter  
+
+Step to deploy:
+1. The solution set is set at empty.
+2. At each step, an items is added to the solution set until a solution is reached.
+3. If the solution set is feasible, the current item is kept.
+4. Else, the item is rejected and never considered again.
+
 **NOTE:
 	** Minimum spanning tree (MST, shortest spanning tree, SST): A minimum-weight tree in a weighted graph which contains all the graph's vertices. >>> Quickly find a near-optimal solution to the travelling salesman 
 	Similar problems: all pairs shortest path, travelling salesman.
 	** Hamiltonian cycle (tour): a path through a graph that starts and ends at the same vertex and includes every other vertex exactly once
 	** Euler cycle: includes each edge once.
 
-https://xlinux.nist.gov/dads/HTML/greedyalgo.html#:~:text=Definition%3A%20An%20algorithm%20that%20always,some%20instances%20of%20other%20problems.
-https://www.programiz.com/dsa/greedy-algorithm
-
 Reference:
 * Travelling salesman: https://xlinux.nist.gov/dads/HTML/travelingSalesman.html
+* Concept: 	
+	• https://xlinux.nist.gov/dads/HTML/greedyalgo.html#:~:text=Definition%3A%20An%20algorithm%20that%20always,some%20instances%20of%20other%20problems.
+	• https://www.programiz.com/dsa/greedy-algorithm
