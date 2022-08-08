@@ -1,0 +1,33 @@
+Exhaustive(Brute-Force):
+ 	• Basic and simplest, Iterating every possibility available to solve that problem. Basically, going through all possible
+    choices until founding a solution.
+
+Recursive:
+    • Based on recursion, breaking a issue into subproblems and calling itself again and again until the problem is solved
+    with the help of base condition
+    • Apply for: DFS for Graph, ...
+
+Divide and Conquer:
+    • Solve a problem in two sections, and continue to divided them into subproblems and solve independently, then add the
+    combined results to produce the final answer to the problem.
+    • Apply for: Binary Search, Merge Sort, Quick Sort, ...
+
+Backtracking (recursion-based):
+    • Solving problem recursively with an empty solution and extending the solution step by step.
+    • One piece at a time, removing those fail solution at any point of time (backtrack) and try the next one. It's better
+    than brute-force because it drops a set of permulation whenever it backtracks.
+    • State Space Tree: https://cdn.programiz.com/sites/tutorial2program/files/ba-state-space-tree.png 
+    • Apply for: Hamiltionian Paths in graph, N Queen problem, Maze solving problem, Knight's tour problem. 
+    
+    • Deploy
+        Backtrack(x)
+            if x is not a solution
+                return false
+            if x is a new solution
+                add to list of solution
+            backtrack(expand x)
+
+
+Book Reference:
+    • Competitive Programmer’s Handbook - Antti Laaksonen, July 3, 2018
+    • Giai thuat & lap trinh - Le Minh Hoang
