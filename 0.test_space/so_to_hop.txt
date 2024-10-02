@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int N = 0;
+int K = 0;
+vector<bool> checked;
+vector<int> permu;
+vector<int> inp = {2,4,6,8,10};
+
+void Try(int x)
+{
+	for (int i = x; i <= N - K + x; i++)
+	{	
+		if (i == N) continue;
+
+		if (!checked[i])
+		{
+			checked[i] = true;
+			permu[x] = inp[i];
+
+			if (x == K-1)
+			{
+				for (auto val : permu)
+				{
+					cout << val << " ";
+				}
+				cout << endl;
+			}
+			else
+			{
+				Try(x+1);
+			}
+
+			checked[i] = false;
+		}
+	}
+}
+
+int main() {
+	freopen("output.txt", "w", stdout);
+	N = inp.size();
+	K = 3;
+	permu.resize(K, 0);
+	checked.resize(N, false);
+    Try(0);
+
+
+	return 0;
+}

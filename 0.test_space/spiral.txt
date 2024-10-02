@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int N;
+
+
+int main() {
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+
+	cin >> N;
+
+	vector<vector<int>> arr(N, vector<int> (N,0));
+
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			cin >> arr[i][j];
+		}
+	}
+
+	int xMin = 0;
+	int xMax = N - 1;
+	int yMin = 0;
+	int yMax = N - 1;
+	int i = xMin;
+	int j = yMin;
+
+	while (xMin <= xMax || yMin <= yMax)
+	{
+		for (j = yMin; j <= yMax; j++)
+		{
+			cout << arr[i][j] << " ";
+		}
+
+		j = yMax;
+		for (i = xMin+1; i <= xMax; i++)
+		{
+			cout << arr[i][j] << " ";
+		}
+
+		i = xMax;
+		for (j = yMax-1; j >= yMin; j--)
+		{
+			cout << arr[i][j] << " ";
+		}
+
+		j = yMin;
+		for (i = xMax-1; i > xMin; i--)
+		{
+			cout << arr[i][j] << " ";
+		}
+
+		xMax--;
+		xMin++;
+		yMax--;
+		yMin++;
+		i = xMin;
+
+	}
+	return 0;
+}
