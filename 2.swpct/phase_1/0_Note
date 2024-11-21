@@ -1,0 +1,8 @@
+// Set up a priority queue
+typedef pair<int, int> ii;
+auto comparator = [](const ii& a, const ii& b)
+{
+    return a.first > b.first;
+};
+
+priority_queue<ii, vector<ii>, decltype(comparator)> q(comparator);

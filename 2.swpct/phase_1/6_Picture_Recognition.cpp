@@ -30,12 +30,13 @@ void Input()
             {
                 um[valInt].second.first = max(um[valInt].second.first, i);
                 um[valInt].second.second = max(um[valInt].second.second, j);
+                um[valInt].first.first = min(um[valInt].first.first, i);
+                um[valInt].first.second = min(um[valInt].first.second, j);
             }
         }
     }
 
     check[0] = false;
-
     for (int i = 1; i < 10; i++)
     {
         if (check[i])
@@ -46,25 +47,17 @@ void Input()
             int yMax = um[i].second.second;
             // cout << i << " " << xMin << "_" << yMin << " " << xMax << "_" << yMax << endl;
             for (int x = xMin; x <= xMax; x++)
-            {
                 for (int y = yMin; y <= yMax; y++)
-                {
                     if (colors[x][y] != i && colors[x][y] != 0)
-                    {
+                        // cout << colors[x][y] << endl;
                         exclude[colors[x][y]] = true;
-                        cout << colors[x][y] << endl;
-                    }
-
-                }
-            } 
         }
     }
     
-    for (int i = 0; i < 10; i++)
+    for (int i = 1; i < 10; i++)
         if (check[i] && exclude[i] != true) ans++;
     
-    cout << "0" << endl;    
- 
+    cout << ans << endl;    
 }
 
 int main() {
